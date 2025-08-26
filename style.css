@@ -1,32 +1,68 @@
+/* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    color: #333;
     text-align: center;
 }
 
+/* Cabeçalho mais moderno */
 header {
-    background-color: #004080;
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
     color: white;
-    padding: 20px;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h2 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+header nav {
+    margin-top: 10px;
 }
 
 header nav a {
-    color: white;
-    margin: 0 10px;
+    display: inline-block;
+    color: #ffeb3b;
+    margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+header nav a:hover {
+    background-color: #ffeb3b;
+    color: #0d47a1;
+}
+
+/* Conteúdo principal */
 main {
     padding: 20px;
 }
 
-footer {
-    background-color: #f1f1f1;
-    padding: 15px;
-    margin-top: 30px;
+main h1 {
+    color: #0d47a1;
 }
 
+/* Rodapé */
+footer {
+    background-color: #eeeeee;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #555;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
+
+/* Galeria de carros */
 .carros {
     display: flex;
     justify-content: center;
@@ -37,6 +73,12 @@ footer {
 
 .carros img {
     width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carros img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
