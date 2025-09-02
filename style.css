@@ -92,11 +92,11 @@ footer {
 }
 
 .filial {
-    background-color: #1668C3;
+    background-color: linear-gradient(135deg,#0d47a1, #1976d2);
     border-radius: 12px;
     padding: 20px;
     width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
