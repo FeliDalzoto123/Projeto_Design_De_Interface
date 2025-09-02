@@ -1,0 +1,17 @@
+<main>
+    <h1>Nossas Filiais</h1>
+    <div class="filiais">
+        <div class="filial">
+            <h2>Filial Curitiba</h2>
+            <p>Rua das Flores, 123 - Centro</p>
+        </div>
+        <div class="filial">
+            <h2>Filial Ponta Grossa</h2>
+            <p>Avenida Vicente Machado, 456 - Centro</p>
+        </div>
+        <div class="filial">
+            <h2>Filial Telêmaco Borba</h2>
+            <p>Rua Paraná, 789 - Centro</p>
+        </div>
+    </div>
+</main>
