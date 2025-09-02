@@ -93,9 +93,9 @@ footer {
 
 .filial {
     background-color: linear-gradient(135deg,#0d47a1, #1976d2);
-    border-radius: 12px;
-    padding: 20px;
-    width: 250px;
+    border-radius: 20px;
+    padding: 25px 0;
+    width: 150px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
