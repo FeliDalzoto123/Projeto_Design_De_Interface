@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #e3f2fd, #bbdefb);
-    color: #000000;
+    color: #FFFFFF;
     text-align: center;
 }
 
@@ -29,7 +29,7 @@ header nav {
 
 header nav a {
     display: inline-block;
-    color: #F4ED00;
+    color: #F;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
