@@ -62,7 +62,7 @@ footer {
 
 .contato-form label {
     font-weight: bold;
-    color: #ffeb3b;
+    color: #FFA500;
 }
 
 .contato-form input,
@@ -76,7 +76,7 @@ footer {
 }
 
 .contato-form button {
-    background: #0d47a1;
+    background: #FFA500;
     color: white;
     padding: 10px;
     border: none;
