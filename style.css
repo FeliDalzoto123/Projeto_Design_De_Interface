@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #96daf2;
+    background-color: #7cd3f2;
     text-align: center;
 }
 
@@ -28,7 +28,7 @@ main {
 }
 
 footer {
-    background-color: #96daf2;
+    background-color: #7cd3f2;
     padding: 15px;
     margin-top: 30px;
 }
