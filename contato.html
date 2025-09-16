@@ -23,7 +23,7 @@
     <!-- Conteúdo principal -->
     <main>
         <h1>Entre em Contato</h1>
-        <form class="contato-form">
+        <form class="contato-form" action="action_contato.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
@@ -35,6 +35,9 @@
             
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+
+             <label for="data">Data do contato:</label>
+            <input type="date" id="data" name="data">
 
             <button type="submit">Enviar</button>
         </form>
