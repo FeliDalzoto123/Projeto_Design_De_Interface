@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locadora IFPR - Resultado do Formulário</title>
+    <title>Dalzoto Locadora - Resultado do Formulário</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,7 +12,7 @@
 
     <!-- Cabeçalho -->
     <header>
-        <h2>Locadora IFPR</h2>
+        <h2>Dalzoto Locadora</h2>
         <nav>
             <a href="index.html">Início</a>
             <a href="filiais.html">Filiais</a>
