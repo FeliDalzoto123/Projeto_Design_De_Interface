@@ -15,7 +15,6 @@
         <h2>Locadora IFPR</h2>
         <nav>
             <a href="index.html">Início</a>
-            <a href="carros.html">Carros</a>
             <a href="filiais.html">Filiais</a>
             <a href="contato.html">Contato</a>
         </nav>
@@ -49,7 +48,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; Dalzoto locadora - Todos os direitos reservados</p>
+        <p>&copy; 2025 Dalzoto locadora - Todos os direitos reservados</p>
     </footer>
 
 </body>
