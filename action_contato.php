@@ -49,7 +49,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; Dalzoto Locadora - Todos os direitos reservados</p>
+        <p>&copy; Dalzoto locadora - Todos os direitos reservados</p>
     </footer>
 
 </body>
