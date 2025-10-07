@@ -2,14 +2,14 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // URL do Apps Script
-    $url = "https://script.google.com/macros/s/AKfycbzoAAkw6E0WQYJPeOkLmNniNMQerbtsIT8HVLC1XYMXjWuJZ9GCls1UtRhIQKPgqIB8/exec";
+    $url = "https://script.google.com/macros/s/AKfycbwVd0sAz5qmKB5Vuo1KsFAO9BoLypkKJm_CRe744zEMEuLJmn5WxZjQ_SoklOkkNFfA/exec";
 
     // Dados do formulário
     $data = [
         "nome" => $_POST["nome"] ?? "",
         "email" => $_POST["email"] ?? "",
-        "mensagem" => $_POST["mensagem"] ?? "",
-        "telefone" => $_POST["telefone"] ?? ""
+        "telefone" => $_POST["telefone"] ?? "",
+        "mensagem" => $_POST["mensagem"] ?? ""
         // Adicione outros campos conforme necessário
     ];
 
