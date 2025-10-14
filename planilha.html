@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Registros da Planilha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>Locadora IFPR</h2>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="filiais.html">Filiais</a>
+            <a href="contato.html">Contato</a>
+            <a href="planilha.html" aria-current="page">Planilha</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Registros do Formulário</h1>
+        <div id="mensagem" class="info-msg">Carregando...</div>
+        <div class="table-wrap" id="table-wrap"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Locadora IFPR</p>
+    </footer>
+
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzf44iVy3GPSvDwOdQIlZFpcQxTWb_9ynq9FRLNwJqb8eeyQSeLXPIaPLyHETEfIeGYyQ/exec"; // substitua pela sua URL
+
+        async function carregar() {
+            const msg = document.getElementById('mensagem');
+            const wrap = document.getElementById('table-wrap');
+            msg.textContent = 'Carregando dados...';
+            wrap.innerHTML = '';
+
+            try {
+                const res = await fetch(SCRIPT_URL);
+                const dados = await res.json();
+
+                if (!dados.length) {
+                    msg.textContent = 'Nenhum registro encontrado.';
+                    return;
+                }
+
+                msg.textContent = '';
+                const table = document.createElement('table');
+                table.className = 'dados-planilha';
+
+                const thead = document.createElement('thead');
+                const trh = document.createElement('tr');
+                Object.keys(dados[0]).forEach(h => {
+                    const th = document.createElement('th');
+                    th.textContent = h;
+                    trh.appendChild(th);
+                });
+                thead.appendChild(trh);
+                table.appendChild(thead);
+
+                const tbody = document.createElement('tbody');
+                dados.forEach(obj => {
+                    const tr = document.createElement('tr');
+                    Object.values(obj).forEach(v => {
+                        const td = document.createElement('td');
+                        td.textContent = v;
+                        tr.appendChild(td);
+                    });
+                    tbody.appendChild(tr);
+                });
+                table.appendChild(tbody);
+                wrap.appendChild(table);
+            } catch (err) {
+                msg.textContent = 'Erro ao carregar: ' + err.message;
+            }
+        }
+
+        carregar();
+    </script>
+</body>
+
+</html>
