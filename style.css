@@ -89,3 +89,43 @@ footer {
 .contato-form button:hover {
     background: #1976d2;
 }
+
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0 12px 24px;
+}
+
+.dados-planilha {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.dados-planilha th {
+  background: linear-gradient(90deg, #0d47a1, #1976d2);
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+}
+
+.dados-planilha td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dados-planilha tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.dados-planilha tr:hover {
+  background: #e3f2fd;
+}
+
+.info-msg {
+  text-align: center;
+  padding: 10px;
+}
