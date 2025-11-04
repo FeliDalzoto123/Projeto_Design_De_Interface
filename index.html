@@ -23,21 +23,61 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <h2>Bem-vindo à Locadora de Carros Bmw</h2>
-        <p>Encontre sua Bmw ideal para sua viagem, trabalho ou lazer.</p>
+  <h2>Bem-vindo à Locadora de Carros Bmw</h2>
+  <p>Encontre sua Bmw ideal para sua viagem, trabalho ou lazer.</p>
 
-        <div class="carros">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzl8M-MjWIcwIRMMwHzXKUwY9qs40JWvImQQ&s"
-                alt="Bmw M3">
+  <div id="conteudo" class="conteudo-scroll">
+    <p>Carregando conteúdo...</p>
+  </div>
+</main>
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE0xy9nPvKGxT3zj7rhTgHV1clwMnSxAuLBg&s"
-                alt="Bmw X5">
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbybDvyoJ_a4fGV6_mXnSyg3kKSX-PGBgOBuQ2hyHiyxVAZYzmxqPRtifqvGuwyb8b-Y/exec"
+async function carregarConteudo() {
+  const container = document.getElementById('conteudo');
+  container.innerHTML = "<p>Carregando conteúdo...</p>";
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNqpFft79aEhrwfp5yuj94_UBJLZ5Xylw-kA&s"
-                alt="Bmw 320i">
-                
-        </div>
-    </main>
+  try {
+    const res = await fetch(SCRIPT_URL);
+    const dados = await res.json();
+    container.innerHTML = '';
+
+    dados.forEach(item => {
+      const bloco = document.createElement('div');
+      bloco.className = 'bloco-item';
+
+      const titulo = document.createElement('h2');
+      titulo.textContent = item.Título || '';
+      bloco.appendChild(titulo);
+
+      const descricao = document.createElement('p');
+      descricao.textContent = item.Descrição || '';
+      bloco.appendChild(descricao);
+
+      if (item.Url && item.Url.startsWith('http')) {
+        if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i) || item.Url.includes('unsplash')) {
+          const img = document.createElement('img');
+          img.src = item.Url;
+          img.alt = item.Título || 'Imagem';
+          bloco.appendChild(img);
+        } else {
+          const link = document.createElement('a');
+          link.href = item.Url;
+          link.textContent = 'Ver mais';
+          bloco.appendChild(link);
+        }
+      }
+
+      container.appendChild(bloco);
+    });
+  } catch (err) {
+    container.innerHTML = "<p>Erro ao carregar dados: " + err.message + "</p>";
+  }
+}
+
+carregarConteudo();
+</script>
+
 
     <!-- Rodapé -->
     <footer>
