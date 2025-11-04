@@ -129,3 +129,38 @@ footer {
   text-align: center;
   padding: 10px;
 }
+.conteudo-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.bloco-item {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.bloco-item img {
+  display: block;
+  margin: 12px auto;
+  max-width: 400px;   /* mantém o tamanho controlado */
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.bloco-item h2 {
+  color: #0d47a1;
+  margin-bottom: 6px;
+}
+
+.bloco-item p {
+  margin: 6px 0;
+}
+
