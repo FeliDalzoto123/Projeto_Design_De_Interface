@@ -17,6 +17,9 @@
             <a href="contato.html">Contato</a>
             <a href="planilha.html" aria-current="page">Planilha</a>
         </nav>
+        <div id="tema-toggle" class="tema-toggle">
+          <div class="bolinha"></div>
+            </div>
     </header>
 
     <main>
@@ -80,6 +83,23 @@
 
         carregar();
     </script>
+   
+    <script>
+  const toggle = document.getElementById("tema-toggle");
+  const body = document.body;
+
+  // Carregar tema salvo
+  let tema = localStorage.getItem("tema") || "tema-claro";
+  if (tema === "tema-escuro") body.classList.add("tema-escuro");
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("tema-escuro");
+
+    const ativo = body.classList.contains("tema-escuro");
+    localStorage.setItem("tema", ativo ? "tema-escuro" : "tema-claro");
+  });
+</script>
+    
 </body>
 
 </html>
