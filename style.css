@@ -164,3 +164,66 @@ footer {
   margin: 6px 0;
 }
 
+/* ---------- Botão Toggle ---------- */
+.tema-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 50px;
+  height: 26px;
+  background: #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  transition: background 0.25s;
+}
+
+.tema-toggle .bolinha {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.25s;
+}
+
+/* ---------- TEMA ESCURO ---------- */
+.tema-escuro {
+  background-color: #0f1720;
+  color: #e9eef5;
+}
+
+.tema-escuro header {
+  background-color: #0b1220;
+}
+
+.tema-escuro footer {
+  background-color: #0b1220;
+  color: #e9eef5;
+}
+
+.tema-escuro .conteudo-scroll {
+  background: #111821;
+  border-color: #2a3645;
+}
+
+.tema-escuro .bloco-item {
+  border-color: #2a3645;
+}
+
+.tema-escuro .bloco-item h2 {
+  color: #8db0ff;
+}
+
+/* Toggle no modo escuro */
+.tema-escuro .tema-toggle {
+  background: #374151;
+}
+
+.tema-escuro .tema-toggle .bolinha {
+  transform: translateX(24px);
+}
+
+
+
