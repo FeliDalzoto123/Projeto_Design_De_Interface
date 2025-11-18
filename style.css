@@ -190,16 +190,16 @@ footer {
 
 /* ---------- TEMA ESCURO ---------- */
 .tema-escuro {
-  background-color: #0f1720;
+  background-color: #586e75;
   color: #e9eef5;
 }
 
 .tema-escuro header {
-  background-color: #0b1220;
+  background-color: #213470;
 }
 
 .tema-escuro footer {
-  background-color: #0b1220;
+  background-color: #586e75;
   color: #e9eef5;
 }
 
