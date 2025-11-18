@@ -19,6 +19,10 @@
             <a href="contato.html">Contato</a>
             <a href="planilha.html" aria-current="page">Planilha</a>
         </nav>
+        <div id="tema-toggle" class="tema-toggle">
+      <div class="bolinha"></div>
+    </div>
+
     </header>
 
     <!-- Conteúdo principal -->
@@ -87,6 +91,8 @@ async function carregarConteudo() {
     container.innerHTML = "<p>Erro ao carregar dados: " + err.message + "</p>";
   }
 }
+
+    
 
 carregarConteudo();
 </script>
